@@ -72,7 +72,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { useQuasar } from 'quasar'
+// import { useQuasar } from 'quasar'
 
 // import WidgetTest01 from 'components/WidgetTest01.vue'
 
@@ -130,10 +130,7 @@ export default defineComponent({
 
   setup () {
     const leftDrawerOpen = ref(false)
-    const $q = useQuasar()
-
     return {
-      $q,
       leftDrawerOpen,
       essentialLinks: linksList,
       toggleLeftDrawer () {

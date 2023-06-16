@@ -1,6 +1,27 @@
 <template>
     <div class="q-pa-md row items-start q-gutter-md">
       <q-card class="my-card" flat bordered>
+        <q-card-section>
+          <div class="row items-center no-wrap">
+          <div class="col">
+            <div class="text-h6">{{titulo}}</div>
+          </div>
+          <div class="col-auto">
+            <q-btn color="grey-7" round flat icon="more_vert">
+              <q-menu cover auto-close>
+                <q-list>
+                  <q-item clickable>
+                    <q-item-section>Expandir</q-item-section>
+                  </q-item>
+                  <q-item clickable>
+                    <q-item-section>Esconder</q-item-section>
+                  </q-item>
+                </q-list>
+              </q-menu>
+            </q-btn>
+          </div>
+        </div>
+        </q-card-section>
         <q-img
           src="https://cdn.quasar.dev/img/parallax2.jpg"
         />
@@ -41,6 +62,7 @@ import { ref } from 'vue'
 export default {
   setup () {
     return {
+      titulo: 'Pasta 01',
       expanded: ref(false),
       lorem: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     }
